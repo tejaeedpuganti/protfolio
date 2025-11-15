@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Teju</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about">
+    <div class="about-container">
+      <div class="about-img">
+        <img src="images/profile.png" alt="Teju Profile">
+      </div>
+
+      <div class="about-text">
+        <h2>About <span>Me</span></h2>
+        <p class="intro">
+          Hi! I'm <strong>Teju</strong>, a passionate Frontend Developer who loves creating
+          modern, responsive, and visually stunning web interfaces. I enjoy transforming ideas
+          into real, interactive websites using clean and creative code.
+        </p>
+
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="skills">Skills</button>
+          <button class="tab-btn" data-tab="education">Education</button>
+        </div>
+
+
+        <div class="tab-content active" id="skills">
+          <div class="skill">
+            <div class="skill-header">
+              <p>HTML</p>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+              <span style="width:90%"></span>
+
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-header">
+              <p>CSS</p>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <span style="width:75%"></span>
+
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-header">
+              <p>JavaScript</p>
+              <span class="skill-percent">50%</span>
+            </div>
+            <div class="skill-bar">
+              <span style="width:50%"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="education">
+          <div class="education-container">
+            <div class="edu-item">
+              <h3>B.Tech in Computer Science</h3>
+              <h4>SASI (Tadepalligidem) in the year (2023-2027)</h4>
+              <p>Focused on web development, data structures, and modern technologies.</p>
+            </div>
+
+            <div class="edu-item">
+              <h3>Intermediate (MPC)</h3>
+              <h4>Narayana in the year(2021-2023)</h4>
+              <p>Developed strong fundamentals in Mathematics, Physics, and Chemistry.</p>
+            </div>
+
+            <div class="edu-item">
+              <h3>SSC(1-10) CBSE(8-10)</h3>
+              <h4>AKRG high school NDD</h4>
+              <p>Completed secondary education with academic excellence and creativity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+<script src="js/script.js"></script>
+
+</html>
